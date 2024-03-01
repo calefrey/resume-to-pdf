@@ -1,0 +1,107 @@
+#:schema https://raw.githubusercontent.com/jsonresume/resume-schema/master/schema.json
+[basics]
+name = "Caleb Frey"
+email = "calefrey@gmail.com"
+image = "https://1.gravatar.com/avatar/6e63c951fa0696996528c66dd8c1de6fed64e13588d20c85224caeaea973241d?size=512"
+summary = "Laboratory Experience and a Passion for Automation"
+[basics.location]
+city = "Philadelphia"
+region = "PA"
+countryCode = "USA"
+
+[[basics.profiles]]
+network = "Linkedin"
+url = "https://www.linkedin.com/in/caleb-frey/"
+
+
+[[education]]
+institution = "Rutgers University, New Brunswick"
+studyType = "MS"
+area = "Materials Science and Engineering"
+courses = [
+    "Research: Toughening Brittle Materials through Interfacial Modification using Finite Element Analysis",
+]
+startDate = "2021"
+endDate = "2022"
+
+[[education]]
+institution = "Rutgers University, New Brunswick"
+studyType = "BS"
+area = "Materials Science and Engineering"
+startDate = "2017"
+endDate = "2021"
+courses = [
+    "Concentration in Metallurgy and Renewable Energy",
+    "Engineering Honors Academy",
+]
+
+
+[[work]]
+name = "Evonik Corporation"
+position = "Digital Transformation Specialist"
+description = "Increase business efficiency with the Microsoft Power Platform and manage laboratory technology to aid research and development"
+startDate = "2022"
+highlights = [
+    "Resolve user feedback and error reporting for a growing list of PowerApps and Flows",
+    "Procure and manage laboratory network and computers to support laboratory needs",
+    "Implement data security and protection to maintain compliance with industry best-practice",
+    "Work with I.T. and laboratory personnel to securely connect equipment to vendor services",
+    "Create Power BI reports to monitor key performance indicators for project management",
+]
+location = "Allentown, PA"
+
+[[work]]
+name = "microMechanics of Deformation Research Group"
+position = "Graduate Researcher"
+startDate = "2020"
+endDate = "2022"
+description = "Model fracture in highly toughened ceramic composites to predict viability of physical experiments using Finite Element Analysis"
+highlights = [
+    "Schedule and manage large-scale simulations using the Slurm job scheduler on a compute cluster",
+    "Automate the generation, execution, and analysis of simulations to survey a wide parameter space",
+    "Develop a data pipeline for efficiently managing and analyzing large amounts of simulation results",
+    "Mentor colleagues to improve process automation, analytics, and efficiency for their own research",
+]
+location = "Rutgers University, New Brunswick"
+
+[[work]]
+name = "Riman Research Group"
+position = "Undergraduate Laboratory Technician"
+startDate = "2018"
+endDate = "2020"
+description = "Process and Characterize samples to aid in the discovery of carbon-negative construction materials"
+highlights = [
+    "Create and maintain a sample database to record material composition, characteristics, and history",
+    "Develop a low-cost reactor control system with centralized logging and management features",
+]
+location = "Rutgers University, New Brunswick"
+
+[[skills]]
+name = "Programming"
+keywords = [
+    "Python",
+    "Microsoft Power Platform",
+    "Matlab",
+    "Arduino",
+    "Willing to learn",
+]
+[[skills]]
+name = "I.T./DevOps"
+keywords = [
+    "Linux",
+    "Docker",
+    "Git",
+    "Slurm",
+    "Monitoring",
+    "Networking",
+    "Hardware",
+    "Cloud/Serverless",
+]
+[[skills]]
+name = "Laboratory Skills"
+keywords = [
+    "Safety-Minded",
+    "Xray Diffraction",
+    "Thermal Analysis",
+    "Mechanical Testing",
+]

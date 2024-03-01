@@ -1,0 +1,46 @@
+((* include "preamble.tex" *))
+
+\begin{document}
+\thispagestyle{empty}
+\begin{header}
+\name{((( data.basics.name )))}
+\personallabel{((( data.basics.summary )))}
+\email{((( data.basics.email )))}
+\location{((( ', '.join(data.basics.location.values()) )))}
+\end{header}
+\begin{work}
+((* for job in data.work*))
+    \begin{job}{((( job.name )))}{((( job.position )))}{((( job.startDate ))) - ((( job.get('endDate',"Present") )))}{((( job.location )))}
+    \jobsummary{((( job.description )))}
+    \begin{jobhighlights}
+    ((* for highlight in job.highlights*))
+        \item ((( highlight )))
+    ((* endfor *))
+    \end{jobhighlights}
+    \end{job}
+((* endfor *))
+\end{work}
+
+
+\begin{education}
+((* for school in data.education *))
+    \begin{school}{(((school.institution)))}{(((school.studyType))) (((school.area)))}{((( school.startDate ))) - ((( school.get('endDate',"Present") )))}{(((school.grade)))}
+    \begin{courses}
+    ((* for course in school.courses *))
+        \item ((( course )))
+    ((* endfor *))
+    \end{courses}
+    \end{school}
+((* endfor *))
+\end{education}
+
+
+\begin{skills}
+((* for skill in data.skills*))
+    \begin{skilltree}{((( skill.name )))}
+        (((', '.join(skill.keywords) )))
+    \end{skilltree}
+((* endfor *))
+\end{skills}
+\end{document}
+
