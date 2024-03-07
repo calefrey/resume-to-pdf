@@ -1,5 +1,7 @@
 import json
 import jinja2
+import os
+template_path = os.getenv("TEMPLATES")
 
 try:
     data = json.load(open("resume.json", "r"))
@@ -9,6 +11,9 @@ except FileNotFoundError:
         import tomllib
         data = tomllib.load(open("resume.toml", "rb"))
         print("Using resume.toml")
+        # also write out a json
+        print("Writing resume.json")
+        json.dump(data,open("resume.json",'w'))
     except FileNotFoundError:
         pass
 try:
@@ -18,7 +23,12 @@ except NameError:
     print("Aborting")
     exit()
 
-template_loader = jinja2.FileSystemLoader(searchpath="templates")
+if template_path: # running in docker with environmental variable
+    print(f"Using {template_path} for templates")
+    template_loader = jinja2.FileSystemLoader(searchpath=template_path)
+else:
+    template_loader = jinja2.FileSystemLoader(searchpath="templates")
+
 environment = jinja2.Environment(  # not using curly braces {} because that doesn't work well with latex
     block_start_string="((*",
     block_end_string="*))",

@@ -20,6 +20,17 @@ If you're not using VSCode that's fine, just run the two steps in sequence
 - `python resume-to-latex.py` to build the latex
 - `pdflatex resume.tex` to turn it into a PDF
 
+## Docker Usage
+So you don't need to install the whole LaTeX package on your system
+```shell
+$ docker build . -t resume-to-pdf
+```
+Have a resume.json or a resume.toml file in your current directory and run
+```shell
+$ docker run --rm -v ./:/resume resume-to-pdf
+```
+
 ## TODO
-- [ ] Make a dockerfile to reduce the number of tools you need to install
+- [x] Make a dockerfile to reduce the number of tools you need to install
+  - [ ] Have github actions generate a container so you don't need to build latex
 - [ ] Setup Github Actions to do the build process whenever a change is pushed
