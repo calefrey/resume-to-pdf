@@ -7,7 +7,7 @@
 			"label": "render resume",
 			"type": "shell",
 			"dependsOn":["Generate Latex"],
-			"command": "pdflatex -halt-on-error -quiet resume.tex",
+			"command": "pdflatex -interaction=batchmode resume.tex",
 			"problemMatcher": [],
 			"group": {
 				"kind": "build",
