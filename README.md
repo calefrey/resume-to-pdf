@@ -23,14 +23,36 @@ If you're not using VSCode that's fine, just run the two steps in sequence
 ## Docker Usage
 So you don't need to install the whole LaTeX package on your system
 ```shell
-$ docker build . -t resume-to-pdf
+docker build . -t resume-to-pdf
 ```
 Have a resume.json or a resume.toml file in your current directory and run
 ```shell
-$ docker run --rm -v ./:/resume resume-to-pdf
+docker run \
+    --rm \
+    -v ./:/resume \
+    resume-to-pdf 
+```
+
+Now you can pull a prebuilt image and run it:
+```shell
+docker run \
+    --rm \
+    -v ./:/resume \
+    ghcr.io/calefrey/resume-to-pdf:master
+```
+
+If you have a github gist called `resume.json` (as per the jsonresume recommendations), you can pass the GITHUBUSER environmental variable rather than keeping a local copy of your json.
+```shell
+docker run \
+    --rm \
+    -v ./:/resume \
+    -e GITHUBUSER={your gh username goes here} \
+    ghcr.io/calefrey/resume-to-pdf:master
 ```
 
 ## TODO
 - [x] Make a dockerfile to reduce the number of tools you need to install
-  - [ ] Have github actions generate a container so you don't need to build latex
-- [ ] Setup Github Actions to do the build process whenever a change is pushed
+- [x] Have github actions generate a container so you don't need to build latex every time
+- [x] Let the image pull from a github gist for resume.json
+- [ ] Make this into a web service using flask to be deployed somewhere
+ - [ ] I think I'll need to use async for that so the page doesn't just take forever to load when waiting for pdflatex to finish

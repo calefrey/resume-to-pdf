@@ -1,30 +1,26 @@
-import json
 import jinja2
 import os
-template_path = os.getenv("TEMPLATES")
+from utils import get_json_from_files, get_json_from_github
 
-try:
-    data = json.load(open("resume.json", "r"))
-    print("Using resume.json")
-except FileNotFoundError:
+# use github gist if GITHUBUSER is specified
+username = os.getenv("GITHUBUSER")
+if username:
     try:
-        import tomllib
-        data = tomllib.load(open("resume.toml", "rb"))
-        print("Using resume.toml")
-        # also write out a json
-        print("Writing resume.json")
-        json.dump(data,open("resume.json",'w'))
-    except FileNotFoundError:
-        pass
-try:
-    assert data
-except NameError:
-    print("Couldn't find any valid resume data files")
-    print("Aborting")
-    exit()
-
-if template_path: # running in docker with environmental variable
-    print(f"Using {template_path} for templates")
+        print(f"Pulling from {username}'s GitHub")
+        data = get_json_from_github(username)
+    except Exception as e:
+        print(e)
+        exit(1)
+else:
+    try:
+        data = get_json_from_files()
+    except Exception as e:
+        print(e)
+        exit(1)
+print(f"Generating a resume for {data['basics']['name']}")
+template_path = os.getenv("TEMPLATES")
+if template_path:  # running in docker with environmental variable
+    # print(f"Using {template_path} for templates")
     template_loader = jinja2.FileSystemLoader(searchpath=template_path)
 else:
     template_loader = jinja2.FileSystemLoader(searchpath="templates")

@@ -3,3 +3,4 @@
 *.log
 *.pdf
 resume.tex
+__pycache__/*
