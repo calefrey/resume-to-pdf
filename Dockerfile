@@ -5,4 +5,4 @@ COPY resume-to-latex.py /app/
 COPY utils.py /app/
 COPY templates app/templates/
 WORKDIR /resume
-CMD python3 /app/resume-to-latex.py && pdflatex -interaction=batchmode resume.tex > /dev/null
+CMD python3 /app/resume-to-latex.py && pdflatex -interaction=batchmode resume.tex > /dev/null && rm resume.out resume.aux resume.log resume.tex
