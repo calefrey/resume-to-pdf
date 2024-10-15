@@ -4,3 +4,4 @@
 *.pdf
 resume.tex
 __pycache__/*
+resume.json

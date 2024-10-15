@@ -9,4 +9,4 @@ COPY . .
 # COPY templates app/templates/
 WORKDIR /resume
 #CMD python3 /app/resume-to-latex.py && pdflatex -interaction=batchmode resume.tex > /dev/null && rm resume.out resume.aux resume.log resume.tex
-CMD python3 /app/webapp.py
+CMD ["python3", "/app/webapp.py"]
