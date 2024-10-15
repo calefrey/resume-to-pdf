@@ -54,5 +54,5 @@ docker run \
 - [x] Make a dockerfile to reduce the number of tools you need to install
 - [x] Have github actions generate a container so you don't need to build latex every time
 - [x] Let the image pull from a github gist for resume.json
-- [ ] Make this into a web service using flask to be deployed somewhere
- - [ ] I think I'll need to use async for that so the page doesn't just take forever to load when waiting for pdflatex to finish
+- [x] Make this into a web service using flask to be deployed somewhere
+  - https://resume.freyc.xyz

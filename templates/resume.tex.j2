@@ -34,7 +34,6 @@
 ((* endfor *))
 \end{education}
 
-
 \begin{skills}
 ((* for skill in data.skills*))
     \begin{skilltree}{((( skill.name )))}
@@ -42,5 +41,23 @@
     \end{skilltree}
 ((* endfor *))
 \end{skills}
-\end{document}
 
+\begin{projects}
+((* for project in data.projects*))
+    \begin{project}{((( project.name )))}{(((', '.join(project.roles) )))}{((( project.startDate ))) - ((( project.get('endDate',"Present") )))}{((( project.entity )))}
+    ((* if project.description *))
+    \projectsummary{((( project.description )))}
+    ((* endif *))
+    ((* if project.url *))
+    \url{((( project.url )))}
+    ((* endif *))
+    \begin{projecthighlights}
+    ((* for highlight in project.highlights*))
+        \item ((( highlight )))
+    ((* endfor *))
+    \end{projecthighlights}
+    \end{project}
+((* endfor *))
+\end{projects}
+
+\end{document}

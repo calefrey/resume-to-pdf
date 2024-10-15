@@ -7,7 +7,7 @@
 			"label": "render resume",
 			"type": "shell",
 			"dependsOn":["Generate Latex"],
-			"command": "pdflatex -interaction=batchmode resume.tex",
+			"command": "pdflatex -interaction=batchmode resume.tex; rm resume.json",
 			"problemMatcher": [],
 			"group": {
 				"kind": "build",
@@ -17,7 +17,7 @@
 		{
 			"label": "Generate Latex",
 			"type": "shell",
-			"command": "python resume-to-latex.py",
+			"command": "python resume_to_latex.py",
 			"problemMatcher": []
 		}
 	]

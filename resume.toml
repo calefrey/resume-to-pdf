@@ -3,7 +3,7 @@
 name = "Caleb Frey"
 email = "calefrey@gmail.com"
 image = "https://1.gravatar.com/avatar/6e63c951fa0696996528c66dd8c1de6fed64e13588d20c85224caeaea973241d?size=512"
-summary = "Laboratory Experience and a Passion for Automation"
+summary = "Automation Engineer and Power Platform Developer"
 [basics.location]
 city = "Philadelphia"
 region = "PA"
@@ -19,7 +19,7 @@ institution = "Rutgers University, New Brunswick"
 studyType = "MS"
 area = "Materials Science and Engineering"
 courses = [
-    "Research: Toughening Brittle Materials through Interfacial Modification using Finite Element Analysis",
+    "Thesis: Toughening Brittle Materials through Interfacial Modification using Finite Element Analysis",
 ]
 startDate = "2021"
 endDate = "2022"
@@ -38,15 +38,21 @@ courses = [
 
 [[work]]
 name = "Evonik Corporation"
-position = "Digital Transformation Specialist"
-description = "Increase business efficiency with the Microsoft Power Platform and manage laboratory technology to aid research and development"
+position = "Digital Transformation Engineer"
+description = "Increase business efficiency with the Microsoft Power Platform and manage laboratory technology to enhance research and development processes"
 startDate = "2022"
 highlights = [
-    "Resolve user feedback and error reporting for a growing list of PowerApps and Flows",
-    "Procure and manage laboratory network and computers to support laboratory needs",
-    "Implement data security and protection to maintain compliance with industry best-practice",
-    "Work with I.T. and laboratory personnel to securely connect equipment to vendor services",
-    "Create Power BI reports to monitor key performance indicators for project management",
+    # "Resolve user feedback and error reporting for a growing list of PowerApps and Flows",
+    "Collaborate with colleagues to develop automation solutions that best fit their needs, saving over 8,000 hours per year and minimizing the risk of human error during complex processes",
+    "Upgrade legacy applications with enhanced features and modern development techniques to ensure future support and maintainability while working with the platform's constraints",
+    # "Procure and manage laboratory network and computers to support laboratory needs",
+    # "Provision computers and services in an isolated laboratory network to maintain compliance with industry best-practice",
+    # "Spearhead the rollout of dedicated laboratory networks, serving as a liaison between the IT department and the laboratory users with an understanding of both networking and laboratory processes",
+    "Spearhead the migration to dedicated laboratory networks, serving as the liaison between corporate I.T. and scientists with an understanding of both networking and laboratory processes",
+    # "Implement data security and protection to maintain compliance with industry best-practice"
+    "Negotiate with laboratory users to strengthen security without inhibiting the research process",
+    # "Work with I.T. and laboratory personnel to securely connect equipment to vendor services",
+    "Generate Power BI reports to monitor key performance indicators for research projects, working alongside management to identify important or inconsistent data",
 ]
 location = "Allentown, PA"
 
@@ -64,17 +70,44 @@ highlights = [
 ]
 location = "Rutgers University, New Brunswick"
 
-[[work]]
-name = "Riman Research Group"
-position = "Undergraduate Laboratory Technician"
-startDate = "2018"
-endDate = "2020"
-description = "Process and Characterize samples to aid in the discovery of carbon-negative construction materials"
+# [[work]]
+# name = "Riman Research Group"
+# position = "Undergraduate Laboratory Technician"
+# startDate = "2018"
+# endDate = "2020"
+# description = "Process and Characterize samples to aid in the discovery of carbon-negative construction materials"
+# highlights = [
+#     "Create and maintain a sample database to record material composition, characteristics, and history",
+#     "Develop a low-cost reactor control system with centralized logging and management features",
+# ]
+# location = "Rutgers University, New Brunswick"
+
+[[projects]]
+name = "Personal Projects"
+roles = ["Small selection of featured personal projects"]
+entity = "https://github.com/calefrey"
+startDate = "2017"
 highlights = [
-    "Create and maintain a sample database to record material composition, characteristics, and history",
-    "Develop a low-cost reactor control system with centralized logging and management features",
+    "Resume JSON to PDF converter exposed as a web service (calefrey/resume-to-pdf)",
+    "Custom portfolio website template designed for those in academics (calefrey/hugo-pjc)",
+    "Single-key Bluetooth keyboard using KiCad to learn PCB Design/prototyping",
+    "Discord to SIP gateway to learn more about real-time applications and telephony systems"
 ]
-location = "Rutgers University, New Brunswick"
+
+[[projects]]
+name = "Digital Phone System Migration"
+description = "Successfully migrated a small business away from their legacy phone system to a modern phone server for increased compatibility and support"
+startDate = "2020-06"
+endDate= "2020-08"
+entity="Alpha Veterinary Care"
+roles=["I.T. Administrator"]
+highlights = [
+    "Determine the best solution for our needs from the many options available on the market",
+    "Install and configure the server and desk phones, upgrading network infrastructure as required",
+    "Train employees how to use the new phone system and design it to minimize process adjustments",
+    "Ensure business continuity in the event of power or internet connectivity losses with backup routes and monitoring tools"
+]
+
 
 [[skills]]
 name = "Programming"
@@ -82,8 +115,10 @@ keywords = [
     "Python",
     "Microsoft Power Platform",
     "Matlab",
-    "Arduino",
-    "Willing to learn",
+    "Powershell",
+    "Bash",
+    # "Arduino",
+    # "Willing to learn",
 ]
 [[skills]]
 name = "I.T./DevOps"
@@ -95,13 +130,13 @@ keywords = [
     "Monitoring",
     "Networking",
     "Hardware",
-    "Cloud/Serverless",
+    # "Cloud/Serverless",
 ]
-[[skills]]
-name = "Laboratory Skills"
-keywords = [
-    "Safety-Minded",
-    "Xray Diffraction",
-    "Thermal Analysis",
-    "Mechanical Testing",
-]
+# [[skills]]
+# name = "Laboratory Skills"
+# keywords = [
+#     "Safety-Minded",
+#     "Xray Diffraction",
+#     "Thermal Analysis",
+#     "Mechanical Testing",
+# ]
