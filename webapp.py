@@ -43,8 +43,4 @@ def main(username: None):
 
 
 if __name__ == "__main__":
-    username = os.getenv("GITHUBUSER")
-    if username:
-        main(username)
-        exit(0)
     app.run("0.0.0.0")
