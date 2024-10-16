@@ -50,9 +50,37 @@ docker run \
     ghcr.io/calefrey/resume-to-pdf:master
 ```
 
+# NEW METHOD SINCE ADDING WEB API
+
+The new version is built primarily for the web service (see https://resume.freyc.xyz/)
+so as a result, building locally as a one-off resume is a bit tricker.
+
+You need to do it in two parts. The first pass grabs your data from the github gist, and the second pass renders it into a PDF.
+
+I'm planning to make this into a one-pass process so running it one-off is easier than running the web service, but that's the current state.
+
+```shell
+docker run \
+    --pull=always \
+    --rm \
+    -v ./:/resume \
+    -e GITHUBUSER=calefrey \
+    ghcr.io/calefrey/resume-to-pdf:master \
+    python3 /app/resume_to_latex.py
+
+docker run \
+    --pull=always \
+    --rm \
+    -v ./:/resume \
+    -e GITHUBUSER=calefrey \
+    ghcr.io/calefrey/resume-to-pdf:master \
+    pdflatex -interaction=batchmode resume.tex
+
+````
 ## TODO
 - [x] Make a dockerfile to reduce the number of tools you need to install
 - [x] Have github actions generate a container so you don't need to build latex every time
 - [x] Let the image pull from a github gist for resume.json
 - [x] Make this into a web service using flask to be deployed somewhere
   - https://resume.freyc.xyz
+- [ ] Allow for easy one-off/static usage now that it's web-first
