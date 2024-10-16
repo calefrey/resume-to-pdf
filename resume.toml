@@ -82,32 +82,18 @@ location = "Rutgers University, New Brunswick"
 # ]
 # location = "Rutgers University, New Brunswick"
 
-[[projects]]
-name = "Personal Projects"
-roles = ["Small selection of featured personal projects"]
-entity = "https://github.com/calefrey"
-startDate = "2017"
-highlights = [
-    "Resume JSON to PDF converter exposed as a web service (calefrey/resume-to-pdf)",
-    "Custom portfolio website template designed for those in academics (calefrey/hugo-pjc)",
-    "Single-key Bluetooth keyboard using KiCad to learn PCB Design/prototyping",
-    "Discord to SIP gateway to learn more about real-time applications and telephony systems"
-]
-
-[[projects]]
-name = "Digital Phone System Migration"
-description = "Successfully migrated a small business away from their legacy phone system to a modern phone server for increased compatibility and support"
-startDate = "2020-06"
-endDate= "2020-08"
-entity="Alpha Veterinary Care"
-roles=["I.T. Administrator"]
-highlights = [
-    "Determine the best solution for our needs from the many options available on the market",
-    "Install and configure the server and desk phones, upgrading network infrastructure as required",
-    "Train employees how to use the new phone system and design it to minimize process adjustments",
-    "Ensure business continuity in the event of power or internet connectivity losses with backup routes and monitoring tools"
-]
-
+# [[work]]
+# name= "Alpha Veterinary Care"
+# position = "Receptionist and I.T. Systems Administrator"
+# startDate="2016"
+# endDate="2021"
+# highlights= [
+#     "Schedule appointments, check clients in and out, and process payments quickly and accurately",
+#     "Relay information between clients, technicians, and veterinarians to answer questions about care",
+#     "Protect business critical data from threats with local redundant storage and off-site backups",
+#     "Modernize digital infrastructure with migration to a new business server and phone system",
+#     "Manage a Windows Server environment, using Group Policy to manage users, computers, and printers"
+# ]
 
 [[skills]]
 name = "Programming"
@@ -140,3 +126,58 @@ keywords = [
 #     "Thermal Analysis",
 #     "Mechanical Testing",
 # ]
+
+[[projects]]
+name = "Laboratory PCs - Give Admin Rights back to the department"
+description = "Replace IT-Managed Laboratory Computers with those managed by the department, allowing for increased flexibility in a research and development environment while keeping the network secure"
+entity = "Evonik Corporation"
+roles = ["Digital Transformation Specialist"]
+startDate="2022"
+endDate="2023"
+highlights = [
+    "Collaborate with corporate I.T. to determine the required security policies to maintain compliance",
+    "Procure standardized equipment for lab workstations, focusing on compact size and port availability",
+    "Generate a golden image and setup script to give each PC a standard configuration and software suite",
+    "Purchase and configure a file server for internal file transfers and configure a backup solution for PCs",
+    "Provide support for laboratory users, solving issues and installing software packages as required",
+    "Serve as a model deployment to lead the way, guiding other departments towards a similar system"
+]
+
+[[projects]]
+name = "Purchasing App Redesign - Business Process Automation"
+description = "Automate and streamline a legacy purchasing process through the use of the Microsoft Power Platform"
+entity = "Evonik Corporation"
+roles = ["Digital Transformation Specialist"]
+startDate="2024-05"
+endDate="2024-10"
+highlights = [
+    "Analyze the previous system and work closely with major shareholders to identify key functionality",
+    "Design training and reference materials demonstrating the new features and process to all other users",
+    "Monitor user feedback to continuously improve the process and resolve errors as they are encountered"
+]
+
+[[projects]]
+name = "New Phone System - Moving into the Digital Age"
+description = "Migrate a small business away from their legacy phone system to a modern phone server for increased compatibility and support"
+startDate = "2020-06"
+endDate = "2020-08"
+entity = "Alpha Veterinary Care"
+roles = ["I.T. Administrator"]
+highlights = [
+    "Determine the best solution for our needs from the many options available on the market",
+    "Install and configure the server and desk phones, upgrading network infrastructure as required",
+    "Train employees how to use the new phone system and design it to minimize process adjustments",
+    "Ensure business continuity in the event of power or internet connectivity losses with redundant routes",
+]
+
+[[projects]]
+name = "Personal Projects"
+roles = ["Projects to explore and learn about tools and technology"] # I'm abusing this section, dw about it
+entity = "https://github.com/calefrey"
+startDate = "2017"
+highlights = [
+    "Resume JSON to PDF converter exposed as a web service (calefrey/resume-to-pdf)",
+    "Custom portfolio website template designed for those in academics (calefrey/hugo-pjc)",
+    "Single-key Bluetooth keyboard using KiCad to learn PCB Design/prototyping",
+    "Discord to SIP gateway to learn more about real-time applications and telephony systems",
+]
