@@ -1,7 +1,14 @@
 import json
 import requests
+import platform  # really, I need to do all this work because windows cmd doesn't support rm?
+
 class CustomException(Exception):
     pass
+
+if platform.system() == "Windows":
+    rmcmd = "del"
+else:
+    rmcmd = "rm"
 
 def get_json_from_github(username):
     r = requests.get(f"https://api.github.com/users/{username}/gists")
@@ -34,6 +41,7 @@ def get_json_from_files():
             # also write out a json
             print("Writing resume.json")
             json.dump(data,open("resume.json",'w'))
-        except FileNotFoundError:
-            raise CustomException("Couldn't find any valid resume data files")
+        except FileNotFoundError as e:
+            print("Couldn't find any valid resume data files")
+            raise e
     return data

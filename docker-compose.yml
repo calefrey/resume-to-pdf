@@ -1,0 +1,15 @@
+services:
+  resume:
+    image: ghcr.io/calefrey/resume-to-pdf:master
+    labels:
+      traefik.enable: true
+      traefik.http.routers.resume.rule: "Host(`resume.freyc.xyz`)"
+      com.centurylinklabs.watchtower.enable: true
+    networks:
+      - traefik
+    restart: unless-stopped
+
+networks:
+  traefik:
+    external: true
+    name: traefik_proxy

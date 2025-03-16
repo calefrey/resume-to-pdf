@@ -3,12 +3,8 @@ import flask
 import os, subprocess
 from flask import make_response
 from resume_to_latex import generate_latex
-import platform  # really, I need to do all this work because windows cmd doesn't support rm?
+from utils import rmcmd
 
-if platform.system() == "Windows":
-    rmcmd = "del"
-else:
-    rmcmd = "rm"
 app = flask.Flask("Resume to PDF")
 
 @app.route("/")
